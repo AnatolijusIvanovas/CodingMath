@@ -3,5 +3,20 @@ window.onload = function() {
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight;
-
+    var centerX = width / 2,
+        centerY = height / 2,
+        radius = 200,
+        angle = 0,
+        numObjects = 20,
+        slice = Math.PI * 2 / numObjects,
+        speed = 0.01,
+        x, y;
+    for (var i = 0; i < numObjects; i += 1) {
+        angle = i * slice;
+        x = centerX + Math.cos(angle) * radius;
+        y = centerY + Math.sin(angle) * radius;
+        context.beginPath();
+        context.arc(x, y, 10, 0, Math.PI * 2, false);
+        context.fill();
+    }
 };
