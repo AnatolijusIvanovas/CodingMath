@@ -4,7 +4,7 @@ window.onload = function() {
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight;
     //context.fillRect(0, 0, width, height);
-    for (var i = 0; i < 25000; i++) {
+    for (var i = 0; i < 1000; i++) {
         context.beginPath();
         context.moveTo(Math.random() * width, Math.random() * height);
         context.lineTo(Math.random() * width, Math.random() * height);
