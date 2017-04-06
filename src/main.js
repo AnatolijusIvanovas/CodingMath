@@ -3,7 +3,6 @@ window.onload = function() {
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight;
-    //context.fillRect(0, 0, width, height);
     for (var i = 0; i < 1000; i++) {
         context.beginPath();
         context.moveTo(Math.random() * width, Math.random() * height);
