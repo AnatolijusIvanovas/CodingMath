@@ -5,6 +5,7 @@ window.onload = function() {
         height = canvas.height = window.innerHeight;
     context.translate(0, height / 2);
     context.scale(1, -1);
+
     for (var angle = 0; angle < Math.PI * 2; angle += 0.005) {
         var x = angle * 200,
             y = Math.sin(angle) * 200;
