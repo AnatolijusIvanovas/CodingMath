@@ -5,7 +5,7 @@ var vector = {
     create: function(x, y) {
         var obj = Object.create(this);
         obj.setX(x);
-        obj.setX(y);
+        obj.setY(y);
         return obj;
     },
 
@@ -18,7 +18,7 @@ var vector = {
     },
 
     setY: function(value) {
-            this._y = value;
+        this._y = value;
     },
 
     getY: function() {
