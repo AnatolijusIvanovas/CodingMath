@@ -10,7 +10,6 @@ window.onload = function() {
         speed = 0.05,
         angle = 0;
     render();
-
     function render() {
         var alpha = baseAlpha + Math.sin(angle) * offset;
         context.fillStyle = "rgba(0, 0, 0, " + alpha + ")";
