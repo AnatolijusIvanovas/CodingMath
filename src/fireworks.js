@@ -13,7 +13,6 @@ window.onload = function() {
         context.clearRect(0, 0, width, height);
         for (var i = 0; i < numParticles; i += 1) {
             var p = particles[i];
-            p.accelerate(gravity);
             p.update();
             context.beginPath();
             context.arc(p.position.getX(), p.position.getY(), 5, 0, Math.PI * 2, false);
