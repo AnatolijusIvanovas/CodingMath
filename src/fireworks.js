@@ -5,9 +5,8 @@ window.onload = function() {
         height = canvas.height = window.innerHeight;
     var particles = [],
         numParticles = 100;
-        gravity = vector.create(0, 0.1);
     for (var i = 0; i < numParticles; i += 1) {
-        particles.push(particle.create(width / 2, height / 3, Math.random() * 5 + 2, Math.random() * Math.PI * 2));
+        particles.push(particle.create(width / 2, height / 3, Math.random() * 5 + 2, Math.random() * Math.PI * 2, 0.1));
     }
     update();
     function update() {
