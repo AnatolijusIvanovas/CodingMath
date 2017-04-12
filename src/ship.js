@@ -2,8 +2,8 @@ window.onload = function() {
 	var canvas = document.getElementById("canvas"),
 		context = canvas.getContext("2d"),
 		width = canvas.width = window.innerWidth,
-		height = canvas.height = window.innerHeight,
-		ship = particle.create(width / 2, height / 2, 0, 0),
+		height = canvas.height = window.innerHeight;
+	var	ship = particle.create(width / 2, height / 2, 0, 0),
 		thrust = vector.create(0, 0);
 	update();
 	document.body.addEventListener("keydown", function(event) {
