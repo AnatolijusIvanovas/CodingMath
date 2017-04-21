@@ -1,4 +1,5 @@
 var particle = {
+    color: null,
 	position: null,
 	velocity: null,
 	gravity: null,
@@ -6,6 +7,7 @@ var particle = {
 	radius: 0,
     create: function(x, y, speed, direction, grav) {
 		var obj = Object.create(this);
+		obj.color = '#000000';
 		obj.position = vector.create(x, y);
 		obj.velocity = vector.create(0, 0);
 		obj.velocity.setLength(speed);
