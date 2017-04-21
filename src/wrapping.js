@@ -10,6 +10,7 @@ window.onload = function() {
         context.clearRect(0, 0, width, height);
         p.update();
         context.beginPath();
+        context.fillStyle = '#123456';
         context.arc(p.position.getX(), p.position.getY(), p.radius, 0, Math.PI * 2, false);
         context.fill();
         if (p.position.getX() - p.radius > width) {
