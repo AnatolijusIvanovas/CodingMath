@@ -18,6 +18,7 @@ var particle = {
 	},
 	update: function() {
 		this.position.addTo(this.velocity);
+		this.velocity.addTo(this.gravity);
 	},
 	angleTo: function(p2) {
 		return Math.atan2(p2.position.getY() - this.position.getY(), p2.position.getX() - this.position.getX());
