@@ -38,6 +38,14 @@ window.onload = function() {
 	            p.velocity.setLength(Math.random() * 8 + 5);
 	            p.velocity.setAngle(-Math.PI / 2 + (Math.random() * .2 - .1));
 	        }
+	        if (p.position.getY() + p.radius < 0) {
+	            p.position.setX(Math.random() * width);
+                p.position.setY(0);
+                p.color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+                p.radius = Math.random() * 5 + 10;
+                p.velocity.setLength(Math.random() * 4 + 1);
+	            p.velocity.setAngle(Math.PI / 2 + (Math.random() * .2 - .1));
+	        }
 	    }
 	}
 };
