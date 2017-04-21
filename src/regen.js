@@ -5,9 +5,9 @@ window.onload = function() {
 		height = canvas.height = window.innerHeight;
 	var particles = [];
 	for (var i = 0; i < 500; i++) {
-	    var p = particle.create(Math.random() * width, height, Math.random() * 8 + 5, -Math.PI / 2 + (Math.random() * .4 - .2), 0.1);
-	    p.color = "#"+((1<<24)*Math.random()|0).toString(16);
-	    p.radius = Math.random() * 5 + 5;
+	    var p = particle.create(Math.random() * width, height, Math.random() * 8 + 5, -Math.PI / 2 + (Math.random() * .2 - .1), 0.1);
+	    p.color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+	    p.radius = Math.random() * 5 + 10;
 	    particles.push(p);
 	}
 	update();
@@ -29,15 +29,14 @@ window.onload = function() {
 	        var p = particles[i];
 	        if (p.position.getX() - p.radius > width ||
                 p.position.getX() + p.radius < 0 ||
-	            p.position.getY() - p.radius > height ||
-	            p.position.getY() + p.radius < 0)
+	            p.position.getY() - p.radius > height)
 	        {
 	            p.position.setX(Math.random() * width);
 	            p.position.setY(height);
-	            p.color = "#"+((1<<24)*Math.random()|0).toString(16);
-	            p.radius = Math.random() * 5 + 5;
+	            p.color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+	            p.radius = Math.random() * 5 + 10;
 	            p.velocity.setLength(Math.random() * 8 + 5);
-	            p.velocity.setAngle(-Math.PI / 2 + (Math.random() * .4 - .2));
+	            p.velocity.setAngle(-Math.PI / 2 + (Math.random() * .2 - .1));
 	        }
 	    }
 	}
