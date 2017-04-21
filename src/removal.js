@@ -18,6 +18,7 @@ window.onload = function() {
 		    var p = particles[i];
 		    p.update();
 		    context.beginPath();
+		    context.fillStyle = p.color;
 		    context.arc(p.position.getX(), p.position.getY(), p.radius, 0, Math.PI * 2, false);
 		    context.fill();
 		}
