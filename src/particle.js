@@ -5,6 +5,7 @@ var particle = {
 	gravity: null,
 	mass: 1,
 	radius: 0,
+	bounce: -1,
     create: function(x, y, speed, direction, grav) {
 		var obj = Object.create(this);
 		obj.color = '#000000';
