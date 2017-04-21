@@ -4,13 +4,15 @@ window.onload = function() {
 		width = canvas.width = window.innerWidth,
 		height = canvas.height = window.innerHeight;
 	var particles = [];
-	for (var i = 0; i < 2500; i++) {
+	for (var i = 0; i < 500; i++) {
 	    var p = particle.create(width / 2, height / 2, Math.random() * 5 + 2, Math.random() * Math.PI * 2, 0);
+	    p.color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 	    p.radius = 10;
 	    particles.push(p);
 	}
 	update();
     function update() {
+        context.clearRect(0, 0, width, height);
 		console.log(particles.length);
 		for (var i = 0; i < particles.length; i += 1) {
 		    var p = particles[i];
