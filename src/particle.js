@@ -6,6 +6,7 @@ var particle = {
 	mass: 1,
 	radius: 0,
 	bounce: -1,
+	friction: 1,
     create: function(x, y, speed, direction, grav) {
 		var obj = Object.create(this);
 		obj.color = '#000000';
@@ -20,8 +21,9 @@ var particle = {
 		this.velocity.addTo(accel);
 	},
 	update: function() {
-		this.position.addTo(this.velocity);
+	    this.velocity.multiplyBy(this.friction);
 		this.velocity.addTo(this.gravity);
+		this.position.addTo(this.velocity);
 	},
 	angleTo: function(p2) {
 		return Math.atan2(p2.position.getY() - this.position.getY(), p2.position.getX() - this.position.getX());
