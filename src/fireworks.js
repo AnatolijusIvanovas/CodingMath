@@ -4,7 +4,7 @@ window.onload = function() {
         width = canvas.width = window.innerWidth,
         height = canvas.height = window.innerHeight;
     var particles = [],
-        numParticles = 100;
+        numParticles = 250;
     for (var i = 0; i < numParticles; i += 1) {
         particles.push(particle.create(width / 2, height / 3, Math.random() * 5 + 2, Math.random() * Math.PI * 2, 0.1));
     }
@@ -15,6 +15,7 @@ window.onload = function() {
             var p = particles[i];
             p.update();
             context.beginPath();
+            context.fillStyle = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
             context.arc(p.position.getX(), p.position.getY(), 5, 0, Math.PI * 2, false);
             context.fill();
         }
