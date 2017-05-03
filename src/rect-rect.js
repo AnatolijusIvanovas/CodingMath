@@ -7,12 +7,12 @@ window.onload = function() {
 	        x: 500,
 	        y: 250,
 	        width: -100,
-	        height: 100
+	        height: 200
 	    },
 	    rect1 = {
 	        x: 0,
 	        y: 0,
-	        width: 100,
+	        width: 200,
 	        height: -100
 	    };
     document.body.addEventListener("mousemove", function(event) {
