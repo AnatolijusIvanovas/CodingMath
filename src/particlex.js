@@ -1,17 +1,15 @@
-var particle = {
-    color: null,
+var particlex = {
 	x: 0,
 	y: 0,
 	vx: 0,
 	vy: 0,
-	gravity: 0,
 	mass: 1,
 	radius: 0,
 	bounce: -1,
 	friction: 1,
-    create: function(x, y, speed, direction, grav) {
+	gravity: 0,
+	create: function(x, y, speed, direction, grav) {
 		var obj = Object.create(this);
-		obj.color = '#000000';
 		obj.x = x;
 		obj.y = y;
 		obj.vx = Math.cos(direction) * speed;
@@ -24,8 +22,8 @@ var particle = {
 		this.vy += ay;
 	},
 	update: function() {
-	    this.vx *= this.friction;
-	    this.vy *= this.friction;
+		this.vx *= this.friction;
+		this.vy *= this.friction;
 		this.vy += this.gravity;
 		this.x += this.vx;
 		this.y += this.vy;
@@ -36,17 +34,19 @@ var particle = {
 	distanceTo: function(p2) {
 		var dx = p2.x - this.x,
 			dy = p2.y - this.y;
+
 		return Math.sqrt(dx * dx + dy * dy);
 	},
 	gravitateTo: function(p2) {
 		var dx = p2.x - this.x,
-            dy = p2.y - this.y,
-            distSQ = dx * dx + dy * dy,
-            dist = Math.sqrt(distSQ),
-            force = p2.mass / distSQ,
-            ax = dx / dist * force,
-            ay = dy / dist * force;
-        this.vx += ax;
-        this.vy += ay;
+			dy = p2.y - this.y,
+			distSQ = dx * dx + dy * dy,
+			dist = Math.sqrt(distSQ),
+			force = p2.mass / distSQ,
+			ax = dx / dist * force,
+			ay = dy / dist * force;
+
+		this.vx += ax;
+		this.vy += ay;
 	}
 };
