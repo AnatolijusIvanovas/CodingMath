@@ -22,7 +22,7 @@ window.onload = function() {
 		context.fill();
 		context.beginPath();
 		context.fillStyle = "#123456";
-		context.arc(planet.x, planet.y, 5, 0, Math.PI * 2, false);
+		context.arc(planet.x, planet.y, 10, 0, Math.PI * 2, false);
 		context.fill();
 		context.beginPath();
         context.fillStyle = "#123456";
